@@ -32,7 +32,7 @@ class MyCrackedPasswords(plugins.Plugin):
         all_bssid=[]
         all_ssid=[]
         
-        f=open('/root/handshakes/wpa-sec.cracked.potfile', 'r+', encoding='utf-8')
+        f=open('/home/pi/handshakes/wpa-sec.cracked.potfile', 'r+', encoding='utf-8')
         for line_f in f:
             try:
                 pwd_f = line_f.split(':')
@@ -44,7 +44,7 @@ class MyCrackedPasswords(plugins.Plugin):
         f.close()
         
         
-        h = open('/root/handshakes/onlinehashcrack.cracked', 'r+', encoding='utf-8')
+        h = open('/home/pi/handshakes/onlinehashcrack.cracked', 'r+', encoding='utf-8')
         for line_h in csv.DictReader(h):
             try:
                 pwd_h = str(line_h['password'])
